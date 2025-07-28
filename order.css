@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+h1 {
+    color: hsl(192, 65%, 37%);
+    font-family: "Pixelify Sans", sans-serif;
+    text-align:center;
+    font-size: 40px;
+}
+body{
+    height: 100vh;
+    background: radial-gradient(#ffe1fed0,#b3ccff);
+    position: relative;
+}
+
+.orderGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 16px; /* space between images */
+  justify-items: center;
+}
+
+.orderImgs {
+  width: 150px;
+}
+
+.orderImgs:hover {
+    transform: scale(1.1); /* zoom effect on hover */
+    transition: transform 0.3s ease; /* smooth transition */
+}
+
+.rect {
+    background: radial-gradient(#ffe1fed0, #b3ccff); 
+  border-radius: 20px;         /* soft round edges */
+  padding: 20px;
+  width: fit-content;          /* only as wide as content */
+  margin: 0 auto;              /* center it */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* optional soft shadow */
+}
+
