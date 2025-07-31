@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+body {
+  height: 100vh;
+  background: radial-gradient(#fff9e6, #cfe8cf); /* soft tea colors */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pixelify Sans", sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #467353;
+  font-size: 40px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#timerDisplay {
+  font-size: 48px;
+  color: #2f4f4f;
+  background-color: #fff;
+  padding: 12px 24px;
+  border-radius: 16px;
+  width: fit-content;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"] {
+  padding: 10px;
+  border: 2px solid #b3e5b3;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 200px;
+  text-align: center;
+  background-color: #fff;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+button {
+  background-color: #b7ddb7;
+  color: white;
+  font-family: "Pixelify Sans", sans-serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #98c798;
+  transform: scale(1.05);
+}
+
+.rect {
+  background: radial-gradient(#fff9e6, #cfe8cf);
+  border-radius: 20px;
+  padding: 20px;
+  width: fit-content;
+  margin: 20px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.orderImgs {
+  width: 120px;
+}

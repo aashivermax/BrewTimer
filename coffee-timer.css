@@ -1,23 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Pixelify+Sans:wght@400..700&display=swap');
 
-h1 {
-    color: hsl(192, 65%, 37%);
-    font-family: "Pixelify Sans", sans-serif;
-    text-align:center;
-    font-size: 40px;
-}
-body{
-    height: 100vh;
-    background: radial-gradient(#ffe1fed0,#b3ccff);
-    position: relative;
+body {
+  height: 100vh;
+  background: radial-gradient(#fff9e6, #e8dbcf); /* soft tea colors */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pixelify Sans", sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
+h1 {
+  color: #735e46;
+  font-size: 40px;
+  text-align: center;
+}
+
+
 .rect {
-    background: radial-gradient(#ffe1fed0, #b3ccff); 
+    background: radial-gradient(#ffe1fed0, #c9d9fa); 
   border-radius: 20px;         /* soft round edges */
   padding: 20px;
   width: fit-content;          /* only as wide as content */
   margin: 0 auto;              /* center it */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* optional soft shadow */
 }
+
+#timerDisplay {
+  font-size: 48px;
+  font-family: "Pixelify Sans", sans-serif;
+  color: #7e552f;
+  background-color: #fff;
+  padding: 12px 24px;
+  border-radius: 16px;
+  width: fit-content;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+button {
+  background-color: #867057;
+  color: white;
+  font-family: "Pixelify Sans", sans-serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #75614a;
+  transform: scale(1.05);
+}
+
+input[type="number"] {
+  font-family: "Pixelify Sans", sans-serif;
+  padding: 10px;
+  border: 2px solid #b3ccff;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 200px;
+  text-align: center;
+  margin-top: 10px;
+  background-color: #fff;
+}
+
+.orderImgs {
+  width: 120px;
+}
+

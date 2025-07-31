@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Pixelify+Sans:wght@400..700&display=swap');
 
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 h1 {
     color: hsl(192, 65%, 37%);
     font-family: "Pixelify Sans", sans-serif;
@@ -14,32 +21,34 @@ body{
     position: relative;
 }
 
-.pic{
-    width:150px;
-    position: relative;
-    top: -13%;
-    left: -7%;;
-}
-p {
-    
-}
 .sub{
     color: #3e6ba5;
     font-size: 20px;
+    position: relative;
     text-align-last: center;
      font-family: "Jua", sans-serif;
   font-weight: 400;
   font-style: normal;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 22px;
+    top: -2%;
+}
+
+
+.pic{
+    width:150px;
+    position: relative;
+    top: -10%;
+    left: -40%;;
 }
 
 /* ...existing code... */
 .pic2 {
     width: 120px;
     position: absolute;
-    left: 90%;
-    bottom: -10%;
+    left: 75%;
+    bottom: 8%;
+    top: 15%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
@@ -47,6 +56,7 @@ p {
 
 }
 /* ...existing code... */
+
 
 .pic3 {
     width: 190px;
@@ -58,7 +68,7 @@ p {
 
 .button {
     position: absolute;
-    bottom: 419px;
+    bottom: 450px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -72,8 +82,7 @@ p {
 }
 .button:hover {
     background-color: #2c4a7f;
-    transition: background-color 0.3s ease;
-    padding:  12px 22px;
+    transition: background-color 0.4s ease;
 
 }
 
@@ -84,7 +93,14 @@ body {
   color: #333;
 }
 
-
+#task-input {
+  width: 300px;
+  padding: 5px;
+  border: 2px solid #c099ff;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: "Pixelify Sans", sans-serif;
+}
 
 
 
@@ -101,11 +117,7 @@ main section {
   margin-top: 10px;
 }
 
-input, button {
-  padding: 5px;
-  font-family: "pixelify Sans", sans-serif;
-  font-size: 16px;
-}
+
 
 ul {
   list-style: none;
@@ -118,3 +130,14 @@ li {
   padding: 5px;
   border-radius: 5px;
 }
+
+.header {
+  color: rgb(76, 72, 105);
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  bottom: 10px;
+  
+}
+
+

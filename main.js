@@ -1,3 +1,20 @@
+const barista = document.querySelector(".pic2");
+let angle3 = 0;
+
+function moveBarista() {
+  const x3 = Math.sin(angle3 * 10) * 2;          // shake side to side (translateX)
+  const rotate = Math.sin(angle3 * 15) * 5;      // tilt (rotate) ±5 degrees
+  
+  barista.style.transform = `translateX(${x3}px) rotate(${rotate}deg)`;
+  
+  angle3 += 0.02;
+  requestAnimationFrame(moveBarista);
+}
+
+moveBarista();
+
+
+
 const cloud = document.querySelector(".pic");
 let angle = 0; // this will increase over time to simulate the "bop"
 
@@ -49,9 +66,6 @@ add-task-btn.addEventListener('click', function(event) {
     todoInput.value = ''; // Clear input field
   }
 });
-
-
-
 
 
 
