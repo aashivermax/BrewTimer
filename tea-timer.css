@@ -77,3 +77,37 @@ button:hover {
 .orderImgs {
   width: 120px;
 }
+
+.animated-tea {
+  position: absolute;
+  width: 200px; /* match your design */
+  height: auto;
+top: 80%;
+  left: 42%;
+}
+
+.bean {
+  position: absolute;
+  top: -30px;
+  width: 40px;
+  height: 40px;
+  background-image: url('matcha.png'); /* replace with your image path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  animation: fall-bean 8s linear infinite;
+}
+
+@keyframes fall-bean {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

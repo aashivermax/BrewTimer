@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="coffee-timer.css">
-        <title>Coffee Timer! ☕</title>
+        <title>☕</title>
         
     </head>
     <body>
@@ -12,9 +12,24 @@
             <button id="startTimerBtn">Start Timer</button>
             <div id="timerDisplay">00:00</div>
             <button id="stopTimerBtn">Stop Timer</button>
+            <button id="pauseTimerBtn">Pause</button>
+
+            
                 <div class="rect">
-                    <img src="coffee-cup.png" alt="coffee cup image" class="orderImgs">
-                </div>
+  <img src="coffee-cup.png" alt="coffee cup image" id="staticCoffee" class="orderImgs">
+  <img src="coffee1.png" alt="animated coffee 1" id="coffeeFrame1" class="orderImgs animated-coffee" hidden>
+  <img src="coffee2.png" alt="animated coffee 2" id="coffeeFrame2" class="orderImgs animated-coffee" hidden>
+</div>
+
         <script src="coffee-timer.js"></script>
+        
+<div class="falling-container">
+  <div class="bean" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="bean" style="left: 90%; animation-delay: 1s;"></div>
+  <div class="bean" style="left: 20%; animation-delay: 2s;"></div>
+  <div class="bean" style="left: 80%; animation-delay: 3s;"></div>
+  <div class="bean" style="left: 5%; animation-delay: 4s;"></div>
+</div>
+
 
     </body>

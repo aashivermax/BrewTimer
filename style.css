@@ -68,7 +68,7 @@ body{
 
 .button {
     position: absolute;
-    bottom: 450px;
+    bottom: 490px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -102,7 +102,25 @@ body {
   font-family: "Pixelify Sans", sans-serif;
 }
 
-
+#add-task-btn {
+  padding: 8px 10px;
+  background-color: #c099ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+}
+#add-task-btn:hover {
+  background-color: #a87cd9;
+  transition: background-color 0.3s ease;
+}
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 400px;
+}
 
 main section {
   margin: 20px;
@@ -117,7 +135,42 @@ main section {
   margin-top: 10px;
 }
 
+.done-btn {
+  background-color: #8379bda2;
+  color: white;
+  border: none;
+  border-radius: 8.5px;
+  padding: 2px 5px;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+}
+.done-btn:hover {
+  background-color: #6b5f9c;
+  transition: background-color 0.3s ease;
+}
 
+.task-item {
+  background-color: #ffffff;
+  margin: 6px 0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(255, 182, 193, 0.3);
+}
+.edit-btn {
+  background-color: #f5acb8c7;
+  color: white;
+  border: none;
+  border-radius: 8.5px;
+  padding: 2px 5px;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+}
+.edit-btn:hover {
+  background-color: #d88a9f;
+  transition: background-color 0.3s ease;
+}
 
 ul {
   list-style: none;
@@ -140,4 +193,37 @@ li {
   
 }
 
+.task-item span {
+  flex: 1;
+  margin-right: 10px;
+}
 
+
+
+.delete-btn {
+  background-color: #ff857a;
+  color: white;
+  border: none;
+  border-radius: 8.5px;
+  padding: 2px 5px;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+}
+.delete-btn:hover {
+  background-color: #e65c50;
+  transition: background-color 0.3s ease;
+}
+
+#clear-tasks-btn {
+  background-color: #ff857a;
+  color: white;
+  border: none;
+  border-radius: 8.5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+}
+#clear-tasks-btn:hover {
+  background-color: #e65c50;
+  transition: background-color 0.3s ease;
+}

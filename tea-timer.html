@@ -6,15 +6,28 @@
 </head>
 <body>
   <h1>Your tea is steeping...</h1>
-  <p>Set your timer for the perfect brew:</p>
+  <p>Let your tea meditate for a bit.</p>
   
   <input type="number" id="timerInput" placeholder="Enter time in minutes">
   <button id="startTimerBtn">Start Timer</button>
   <div id="timerDisplay">00:00</div>
   <button id="stopTimerBtn">Stop Timer</button>
+  <button id="pauseTimerBtn">Pause</button>
 
-  <div class="rect">
-    <img src="teacup.png" alt="tea cup image" class="orderImgs">
-  </div>
+  <div class="rect" id="imageContainer">
+  <img src="teacup.png" alt="tea cup image" id="staticTea" class="orderImgs">
+  <img src="tea1.png" alt="animated tea 1" id="teaFrame1" class="orderImgs animated-tea" hidden>
+  <img src="tea2.png" alt="animated tea 2" id="teaFrame2" class="orderImgs animated-tea" hidden>
+</div>
+
+  <script src="tea-timer.js"></script>
+
+  <div class="falling-container">
+  <div class="bean" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="bean" style="left: 90%; animation-delay: 1s;"></div>
+  <div class="bean" style="left: 20%; animation-delay: 2s;"></div>
+  <div class="bean" style="left: 80%; animation-delay: 3s;"></div>
+  <div class="bean" style="left: 5%; animation-delay: 4s;"></div>
+</div>
 </body>
 </html>

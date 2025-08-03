@@ -22,7 +22,7 @@ h1 {
 
 
 .rect {
-    background: radial-gradient(#ffe1fed0, #c9d9fa); 
+    background: radial-gradient(#ffe1fed0, #e4c690); 
   border-radius: 20px;         /* soft round edges */
   padding: 20px;
   width: fit-content;          /* only as wide as content */
@@ -44,7 +44,7 @@ h1 {
 
 
 button {
-  background-color: #867057;
+  background-color: #9b866e;
   color: white;
   font-family: "Pixelify Sans", sans-serif;
   padding: 10px 20px;
@@ -64,7 +64,7 @@ button:hover {
 input[type="number"] {
   font-family: "Pixelify Sans", sans-serif;
   padding: 10px;
-  border: 2px solid #b3ccff;
+  border: 2px solid #cfb6a1;
   border-radius: 10px;
   font-size: 16px;
   width: 200px;
@@ -75,5 +75,50 @@ input[type="number"] {
 
 .orderImgs {
   width: 120px;
+}
+
+.animated-coffee {
+  position: absolute;
+  width: 200px; /* match your design */
+  height: auto;
+top: 88%;
+  left: 42%;
+}
+
+.falling-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.bean {
+  position: absolute;
+  top: -30px;
+  width: 40px;
+  height: 40px;
+  background-image: url('beanTransp.png'); /* replace with your image path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  animation: fall-bean 8s linear infinite;
+}
+
+@keyframes fall-bean {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
 }
 
