@@ -1,53 +1,64 @@
+<!-- updated index for GitHub Pages fix -->
+
 <!DOCTYPE html>
 <html>
-    <head>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-         <link rel="stylesheet" href="style.css">
-         <script src="main.js" defer ></script>
-        <title>☕</title>
-        <h1>Welcome to BrewTimer!</h1>
-        
-    </head>
-    <body>
-        <p class="sub">To start a timer, order something from the menu below!</p>
-        <div class="cloud-scene">
-  <img src="download-removebg-preview.png" alt="pixel cloud" class="pic" />
-  <img src="barista_tst_pnk_22-1.png.png" alt="pixel barista" class="pic2" />
-</div>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>☕</title>
+</head>
 
-        <img src="download-removebg-preview-removebg-preview.png" alt="pixel art" class="pic3">
-        <button class="button" onclick="location.href='menu.html'">View Menu</button>
+<body>
+  <header>
+    <h1 class="header-title">˚　✦　　✦　　　.　　. 　 ˚　.　　　　　 . ✦　　　 　˚　　　　 . ★⋆.
+　　　.    　˚　✭　 　　*　　 　　✦　　　..　　　✦　˚ 　　　　 ˚　.˚　　　　　✭　.　　. 　 ˚　.　　　　 　　 　　　　 ✦</h1>
+  </header>
 
-    </body>
-    <header>
-      <div class="header">
-        <h2>Cafe Planner</h2></h2> 
-      </div>
-        <p class="header-sub">Ready for a productive day?</p>
-    </header>
-     <main>
+  <h1>Welcome to <strong class="brewTimer">BrewTimer</strong>!</h1>
+  <p class="sub">To start a timer, <strong>order</strong> something from the menu below!</p>
+  
+  <div class="cloud-scene">
+    <img src="download-removebg-preview.png" alt="pixel cloud" class="pic" />
+    <img src="barista_tst_pnk_22-1.png.png" alt="pixel barista" class="pic2" />
+  </div>
+
+  <img src="download-removebg-preview-removebg-preview.png" alt="pixel art" class="pic3">
+  <button class="button" onclick="location.href='menu.html'">View Menu</button>
+
+  <main>
     <section id="clock-section">
-      <h2>Current Time</h2>
+      <h2>Current Time </h2>
       <div id="clock">00:00:00</div>
     </section>
-    <section id="date-section">
-      <h2>Current Date</h2>
-      <div id="date">DD-MM-YYYY</div>
+
+    <section id="quote-section">
+      <h2>Today's Little Thought 💌</h2>
+      <input type="text" id="quote-input" placeholder="Enter your thought here...">
+      <button id="save-quote-btn">Save Thought</button>
     </section>
+
     <section id="weather-section">
-      <h2>Weather</h2>
-      <div id="weather">Loading...</div>
+      <h2>Weather ☁️</h2>
+      <input type="text" id="city" placeholder="Enter city name">
+      <button onclick="getWeather()" id="get-weather-btn">Get Weather</button>
+      <img id="weather-icon" src="" alt="Weather Icon" style="display:none;">
+      <div id="temp-div"></div>
+      <div id="weather-info-div"></div> 
+      <div id="hourly-forecast"></div>
     </section>
+
     <section id="todo-section">
-      <h2>To-Do List</h2>
+      <h2>To-Do Today </h2>
       <input type="text" id="task-input" placeholder="Add a task...">
       <button id="add-task-btn">Add</button>
       <ul id="task-list"></ul>
       <button id="clear-tasks-btn">Clear All</button>
     </section>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
 </html>
