@@ -42,9 +42,135 @@ function moveCloud2() {
 
 moveCloud2(); // start the animation for the second cloud
 
+// Weather API
+function getWeather() {
+  const apiKey = '1958c9c1520e87999f9545f9c846426a';
+  const city = document.getElementById('city').value;
+  if (!city) {
+    alert('Please enter a city name');
+    return;
+  }
+  const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+
+  fetch(currentWeatherUrl)
+    .then(response => response.json())
+    .then(data => {
+      displayCurrentWeather(data);
+    })
+    .catch(error => {
+      console.error('Error fetching current weather:', error);
+      alert('Error fetching current weather. Please try again.');
+    });
+  fetch(forecastUrl)
+  .then(response => response.json())
+  .then(data => {
+    displayHourlyForecast(data); // not displayForecast
+  })
+  .catch(error => {
+    console.error('Error fetching forecast:', error);
+    alert('Error fetching forecast. Please try again.');
+  });
+
+}
+
+function displayCurrentWeather(data) {
+  const tempDivInfo = document.getElementById('temp-div');
+  const weatherInfoDiv = document.getElementById('weather-info-div');
+  const weatherIcon = document.getElementById('weather-icon');
+  const hourlyForecastDiv = document.getElementById('hourly-forecast');
+
+  // Clear previous content
+  weatherInfoDiv.innerHTML = '';
+  hourlyForecastDiv.innerHTML = '';
+  tempDivInfo.innerHTML = '';
+
+  if (data.cod !== 200) {
+    weatherInfoDiv.innerHTML = `<p>Error: ${data.message}</p>`;
+  } else {
+    const cityName = data.name;
+    const temprature = data.main.temp;
+    const description = data.weather[0].description;
+    const iconCode = data.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
+
+    const tempratureHTML = `
+    <p>${cityName} - ${temprature}°C</p>
+    `;
+    const weatherHTML = `
+    <p>${cityName}
+    <p>${description}</p>
+    `;
+    tempDivInfo.innerHTML = tempratureHTML;
+    weatherInfoDiv.innerHTML = weatherHTML;
+    weatherIcon.src = iconUrl;
+    weatherIcon.alt = description;
+    
+    showImage();
+  }
+
+}
+
+function displayHourlyForecast(data) {
+  const hourlyForecastDiv = document.getElementById('hourly-forecast');
+  const next24Hours = data.list.slice(0, 8); // Next 24 hours (8 x 3hr steps)
+  hourlyForecastDiv.innerHTML = ''; // Clear previous
+
+  next24Hours.forEach(item => {
+    const dateTime = new Date(item.dt * 1000);
+    const hour = dateTime.getHours();
+    const temp = item.main.temp;
+    const iconCode = item.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
+
+    const hourlyItemHTML = `
+      <div class="hourly-item">
+        <span>${hour}:00</span>
+        <img src="${iconUrl}" alt="Weather Icon">
+        <p>${temp}°C</p>
+      </div>
+    `;
+
+    hourlyForecastDiv.innerHTML += hourlyItemHTML;
+  });
+}
 
 
-// Live Clock
+function showImage() {
+  const weatherIcon = document.getElementById('weather-icon');
+  weatherIcon.style.display = 'block'; // Show the weather icon
+}
+
+// Thought Section
+document.getElementById("save-quote-btn").addEventListener("click", () => {
+  const quoteInput = document.getElementById("quote-input");
+  const quote = quoteInput.value.trim();
+  if (quote === "") {
+    alert("Enter a thought!");
+    return;
+  }
+  // Remove the Save Thought button
+  const saveQuoteBtn = document.getElementById("save-quote-btn");
+  saveQuoteBtn.remove();
+  // remove the input field
+  quoteInput.remove();
+
+  const quoteSection = document.getElementById("quote-section");
+  const quoteDiv = document.createElement("div");
+  quoteDiv.textContent = "Today's Thought: " + quote;
+  quoteSection.appendChild(quoteDiv);
+  quoteInput.value = ""; // Clear the input field
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 },
+    colors: ['#ffb6c1', '#ffc0cb', '#add8e6', '#fff0f5'],
+  });
+});
+
+
+
+// Live Clock 
 function updateClock() {
   const now = new Date();
   const timeString = now.toLocaleTimeString();

@@ -1,41 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Jua&display=swap');
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+::selection {
+  background: #ffc0cb; /* light pink */
+  color: #333; /* dark text */
+}
+
+.home {
+  position: absolute;
+  bottom: 200px;
+  left: 26%;
+  background-color: #ff6fa4;
+  color: white;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 16px;
+}
+.button {
+  position: absolute;
+  bottom: 200px;
+  left: 20%;
+  transform: translateX(-50%);
+  padding: 12px 26px;
+  background-color: #ff6fa4;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+body {
+  font-family: "Pixelify Sans", sans-serif;
+  background: radial-gradient(#ffe1fed0, #b3ccff);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+  padding: 30px;
+  border-radius: 25px;
+  border: 4px dashed #ffb6c1;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background: #fffafc;
+}
+
+.rect {
+  text-align: center;
+}
 
 h1 {
-    color: hsl(192, 65%, 37%);
-    font-family: "Pixelify Sans", sans-serif;
-    text-align:center;
-    font-size: 40px;
+  font-size: 48px;
+  color: #3e6ba5;
+  font-family: "Jua", sans-serif;
+  margin-bottom: 10px;
 }
-body{
-    height: 100vh;
-    background: radial-gradient(#ffe1fed0,#b3ccff);
-    position: relative;
+
+.subtitle {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 30px;
 }
 
 .orderGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 16px; /* space between images */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
   justify-items: center;
+  margin-bottom: 30px;
 }
 
 .orderImgs {
   width: 150px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .orderImgs:hover {
-    transform: scale(1.1); /* zoom effect on hover */
-    transition: transform 0.3s ease; /* smooth transition */
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-.rect {
-    background: radial-gradient(#ffe1fed0, #b3ccff); 
-  border-radius: 20px;         /* soft round edges */
-  padding: 20px;
-  width: fit-content;          /* only as wide as content */
-  margin: 0 auto;              /* center it */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* optional soft shadow */
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
 }
 
+button {
+  font-family: "Pixelify Sans", sans-serif;
+  padding: 10px 20px;
+  background-color: #3e6ba5;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2c4a7d;
+}
+
+/* soft fade on load */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

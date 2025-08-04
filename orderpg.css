@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+body {
+  font-family: "Pixelify Sans", cursive;
+  background: linear-gradient(to bottom right, #ffe1fe, #b3ccff);
+  height: 100vh;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 6px dashed #ffb6c1;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
+}
+
+h1 {
+  font-family: "Agbalumo", serif;
+  font-size: 48px;
+  color: #ff69b4;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px #fff0f5;
+}
+
+p {
+  font-size: 20px;
+  color: #4b4b4b;
+  margin-bottom: 30px;
+}
+
+/* 🌸 Shared Button Styles */
+button {
+  font-family: "Jua", sans-serif;
+  padding: 14px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ☕ View Menu Button */
+.button {
+  background-color: #88ccff;
+  color: white;
+}
+
+.button:hover {
+  background-color: #5daeff;
+  transform: scale(1.05);
+}
+
+/* 🍰 I'm Ready Button */
+.readyOrder {
+  background-color: #ff88b8;
+  color: white;
+}
+
+.readyOrder:hover {
+  background-color: #ff6fa4;
+  transform: scale(1.05);
+}
